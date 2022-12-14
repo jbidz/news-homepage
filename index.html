@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.min.css" />
+    <link rel="icon" href="assets/images/favicon-32x32.png" />
+    <title>News Homepage</title>
+    <style>
+      #sidebar {
+        transition: right ease-in-out 300ms;
+      }
+      #sidebar.show {
+        right: 0;
+      }
+      #bg {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.2);
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 300ms ease;
+      }
+      #bg.show {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body class="font-inter-regular">
+    <div id="bg"></div>
+    <nav
+      id="sidebar"
+      class="fixed top-0 -right-full h-full bg-white w-80 ease-in-out"
+    >
+      <button
+        class="h-8 w-8 absolute top-8 right-8 bg-[url(assets/images/icon-menu-close.svg)] bg-no-repeat bg-contain"
+        id="close"
+      ></button>
+      <ul class="pl-12 mt-32 flex flex-col gap-8 font-inter-bold text-gray-800">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">New</a></li>
+        <li><a href="#">Popular</a></li>
+        <li><a href="#">Trending</a></li>
+        <li><a href="#">Category</a></li>
+      </ul>
+    </nav>
+    <header class="flex items-center justify-center px-4">
+      <div class="flex items-center justify-between w-full max-w-5xl py-12">
+        <img src="assets/images/logo.svg" alt="logo" />
+        <nav class="relative">
+          <ul class="md:flex items-center gap-9 hidden">
+            <li>
+              <a class="text-gray-600 hover:text-red-400 transition" href="#"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-red-400 transition" href="#"
+                >New</a
+              >
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-red-400 transition" href="#"
+                >Popular</a
+              >
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-red-400 transition" href="#"
+                >Trending</a
+              >
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-red-400 transition" href="#"
+                >Category</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <button
+          class="inline-block md:hidden bg-[url(assets/images/icon-menu.svg)] h-6 w-12 bg-no-repeat bg-contain"
+          id="open"
+        ></button>
+      </div>
+    </header>
+    <main class="flex items-center justify-center px-4">
+      <div class="max-w-5xl">
+        <div class="grid md:grid-cols-3 gap-6 pb-16">
+          <div class="md:col-span-2">
+            <picture>
+              <source
+                srcset="assets/images/image-web-3-desktop.jpg"
+                media="(min-width: 768px)"
+              />
+              <img
+                class="w-full"
+                src="assets/images/image-web-3-mobile.jpg"
+                alt=""
+                aria-hidden="true"
+              />
+            </picture>
+          </div>
+
+          <div class="md:row-span-2 bg-slate-900 p-6 row-start-4">
+            <h2 class="text-yellow-600 font-inter-bold text-3xl">New</h2>
+            <div class="mt-4 border-b border-gray-600">
+              <h2 href="#" class="text-white font-inter-bold mb-2">
+                <a href="#" class="hover:text-red-400 transition">
+                  Hydrogen VS Electric Cars
+                </a>
+              </h2>
+              <p class="text-gray-400 mb-6 text-sm leading-6">
+                Will hydrogen-fueled cars ever catch up to EVs?
+              </p>
+            </div>
+            <div class="mt-6 border-b border-gray-600">
+              <h2 class="text-white font-inter-bold mb-2">
+                <a href="#" class="hover:text-red-400 transition"
+                  >The Downside of AI artisty</a
+                >
+              </h2>
+              <p class="text-gray-400 mb-6 text-sm leading-6">
+                What are the possible adverse effects of on-deman AI image
+                generation?
+              </p>
+            </div>
+            <div class="mt-6">
+              <h2 class="text-white font-inter-bold mb-2">
+                <a href="#" class="hover:text-red-400 transition"
+                  >Is VC Funding Drying Up?</a
+                >
+              </h2>
+              <p class="text-gray-400 text-sm leading-6">
+                Private funding by VC firms is down 50% YOY. We take a look at
+                what that means.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <h1 class="text-5xl font-inter-extra-bold">
+              The Bright Future of Web 3.0?
+            </h1>
+          </div>
+
+          <div>
+            <p class="text-gray-600 mb-8 text-[15px]">
+              We dive into the next evolution of the web that claims to put the
+              power of the platforms back into the hands of the people. But is
+              it really fulfilling its promise?
+            </p>
+            <a
+              href="#"
+              class="bg-red-400 text-white font-inter-bold py-3 px-8 inline-block tracking-[0.2em] hover:bg-slate-900 transition"
+              >READ MORE</a
+            >
+          </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-6 pb-16">
+          <div class="grid grid-cols-3 gap-4 flex-1">
+            <div class="overflow-hidden">
+              <a href="#">
+                <img
+                  class="h-32 object-cover w-full hover:scale-110 transition"
+                  src="assets/images/image-retro-pcs.jpg"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </a>
+            </div>
+            <div class="col-span-2">
+              <div class="text-gray-400 text-2xl font-inter-bold mb-2">01</div>
+              <h3 class="font-inter-bold text-black mb-2">
+                <a href="#" class="hover:text-red-400 transition"
+                  >Reviving Retro PCs</a
+                >
+              </h3>
+              <p class="text-[15px] text-gray-600">
+                What happens when old PCs are given modern upgrades?
+              </p>
+            </div>
+          </div>
+          <div class="grid grid-cols-3 flex-1 gap-4">
+            <div class="overflow-hidden">
+              <a href="#">
+                <img
+                  class="h-32 w-full object-cover hover:scale-110 transition"
+                  src="assets/images/image-top-laptops.jpg"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </a>
+            </div>
+            <div class="col-span-2">
+              <div class="text-gray-400 text-2xl font-inter-bold mb-2">02</div>
+              <h3 class="font-inter-bold text-black mb-2">
+                <a href="#" class="hover:text-red-400 transition"
+                  >Top 10 Laptops of 2022</a
+                >
+              </h3>
+              <p class="font-[15px] text-gray-600">
+                Our best picks for various needs and budgets.
+              </p>
+            </div>
+          </div>
+          <div class="grid grid-cols-3 flex-1 gap-4">
+            <div class="overflow-hidden">
+              <a href="#">
+                <img
+                  class="h-32 w-full object-cover hover:scale-110 transition"
+                  src="assets/images/image-gaming-growth.jpg"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </a>
+            </div>
+            <div class="col-span-2">
+              <div class="text-gray-400 text-2xl font-inter-bold mb-2">03</div>
+              <h3 class="font-inter-bold text-black mb-2">
+                <a href="#" class="hover:text-red-400 transition"
+                  >The Growth of Gaming</a
+                >
+              </h3>
+              <p class="text-[15px] text-gray-600">
+                How the pandemic has sparked fresh opportunities.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      const sidebar = document.getElementById("sidebar");
+      const bg = document.getElementById("bg");
+      const open = document.getElementById("open");
+
+      open.onclick = function (e) {
+        sidebar.classList.add("show");
+        bg.classList.add("show");
+      };
+
+      window.addEventListener("resize", function (e) {
+        if (window.innerWidth > 768) {
+          bg.classList.remove("show");
+          sidebar.classList.remove("show");
+        }
+      });
+
+      window.addEventListener("click", function (e) {
+        if (
+          (e.target !== sidebar || e.target.matches("#close")) &&
+          !e.target.matches("#open")
+        ) {
+          sidebar.classList.remove("show");
+          bg.classList.remove("show");
+        }
+      });
+    </script>
+  </body>
+</html>

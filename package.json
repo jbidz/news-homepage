@@ -1,0 +1,18 @@
+{
+  "name": "news-homepage-main",
+  "version": "1.0.0",
+  "description": "![Design preview for the News homepage coding challenge](./design/desktop-preview.jpg)",
+  "scripts": {
+    "dev": "postcss main.css -o style.min.css -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "cssnano": "^5.1.14",
+    "postcss": "^8.4.20",
+    "postcss-cli": "^10.1.0",
+    "tailwindcss": "^3.2.4"
+  }
+}
